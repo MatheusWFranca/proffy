@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Proffy - Sua plataforma de estudos online</title>
 
@@ -56,10 +56,77 @@
             <label for="bio">Biografia</label>
             <textarea name="bio" id="bio" required></textarea>
           </div>
+        </fieldset>
 
+        <fieldset>
+          <legend>Sobre a Aula</legend>
+          <div class="select-block">
+            <label for="subject">Matéria</label>
+            <select name="subject" id="subject" required>
+              <option value="">Selecione uma opção</option>
+              <option value="1">Artes</option>
+              <option value="2">Biologia</option>
+              <option value="3">Ciências</option>
+              <option value="4">Educação Física</option>
+              <option value="5">Física</option>
+              <option value="6">Geografia</option>
+              <option value="7">História</option>
+              <option value="8">Matemática</option>
+              <option value="9">Português</option>
+              <option value="10">Química</option>
+            </select>
+          </div>
+
+          <div class="input-block">
+            <label for="cost">Custo da sua hora/aula
+              <small>(R$)</small>
+            </label>
+            <input type="cost" id="cost" type="number" required>
+          </div>
+        </fieldset>
+
+        <fieldset id="schedule-items">
+          <legend>Horários disponíveis
+            <button id="add-time">+ Novo Horário</button>
+          </legend>
+
+          <div class="schedule-item">
+            <div class="select-block">
+              <label for="weekday">Dia da Semana</label>
+              <select name="weekday[]" required>
+                <option value="0">Domingo</option>
+                <option value="1">Segunda-Feira</option>
+                <option value="2">Terça-Feira</option>
+                <option value="3">Quarta-Feira</option>
+                <option value="4">Quinta-Feira</option>
+                <option value="5">Sexta-feira</option>
+                <option value="6">Sábado</option>
+              </select>
+            </div>
+
+
+            <div class="input-block">
+              <label for="time_from">Das</label>
+              <input type="time" name="time_from[]" required>
+            </div>
+
+            <div class="input-block">
+              <label for="time_to">Até</label>
+              <input type="time" name="time_to[]" required>
+            </div>
         </fieldset>
       </form>
-    </main>
+
+      <footer>
+        <p>
+          <img src="/images/icons/warning.svg" alt="Aviso imporante">
+          Importante! <br> Preencha todos os dados
+        </p>
+        <button type="submit" form="create-class">Salvar Cadastro</button>
+      </footer>
+  </div>
+
+  </main>
 
 </body>
 
