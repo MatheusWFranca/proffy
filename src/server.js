@@ -1,3 +1,5 @@
+// Dados
+
 const proffys = [{
     name: "Matheus França",
     avatar: "https://avatars1.githubusercontent.com/u/61566949?s=460&u=513fc5e8e3422e553a4c06c5b71716f9fc9347d3&v=4",
@@ -22,23 +24,49 @@ const proffys = [{
   }
 ]
 
+const subjects = [
+  "Artes",
+  "Biologia",
+  "Ciências",
+  "Educação Física",
+  "Física",
+  "Geografia",
+  "História",
+  "Matemática",
+  "Português",
+  "Química",
+]
+
+const weekdays = [
+ "Domingo",
+ "Segunda-Feira",
+ "Terça-Feira",
+ "Quarta-Feira",
+ "Quinta-Feira",
+ "Sexta-feira",
+ "Sábado",
+]
+
+// funcionalidades da aplicação
+
 function pageLanding(req, res) {
   return res.render("index.html")
 }
 
 function pageStudy(req, res) {
-  return res.render("study.html", { proffys })
+  const filters = req.query
+  return res.render("study.html", { proffys, filters, subjects, weekdays })
 }
 
 function pageGiveClasses(req, res) {
   return res.render("give-classes.html")
 }
 
-
+// servidor
 const express = require('express')
 const server = express()
 
-// CONFIG NUNJUCKS
+// config nunjucks (template engine)
 const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
   express: server,

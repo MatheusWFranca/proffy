@@ -33,16 +33,11 @@
             <label for="subject">Matéria</label>
             <select name="subject" id="subject">
               <option value="" disabled="" hidden="">Selecione uma opção</option>
-              <option value="1">Artes</option>
-              <option value="2">Biologia</option>
-              <option value="3">Ciências</option>
-              <option value="4">Educação Física</option>
-              <option value="5">Física</option>
-              <option value="6">Geografia</option>
-              <option value="7">História</option>
-              <option value="8">Matemática</option>
-              <option value="9">Português</option>
-              <option value="10">Química</option>
+              {%for subject in subjects %}
+              <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }}> 
+                {{subject}}
+              </option>
+              {%endfor%}
             </select>
           </div>
 
@@ -50,19 +45,17 @@
             <label for="weekday">Dia da Semana</label>
             <select name="weekday" id="weekday">
               <option value="" disabled="" hidden="">Selecione uma opção</option>
-              <option value="0">Domingo</option>
-              <option value="1">Segunda-Feira</option>
-              <option value="2">Terça-Feira</option>
-              <option value="3">Quarta-Feira</option>
-              <option value="4">Quinta-Feira</option>
-              <option value="5">Sexta-feira</option>
-              <option value="6">Sábado</option>
+              {%for weekday in weekdays %}
+              <option value="{{loop.index0}}" {{ "selected" if filters.weekday == loop.index0 }}> 
+                {{weekday}}
+              </option>
+              {%endfor%}
             </select>
           </div>
 
           <div class="input-block">
             <label for="time">Hora (de 0 até 24)</label>
-            <input name="time" id="time" type="time">
+            <input name="time" id="time" type="time" value="{{filters}}">
           </div>
           <button type="submit">Filtrar</button>
         </form>
@@ -74,9 +67,7 @@
       {%for proffy in proffys %}
       <article class="teacher-item">
         <header>
-          <img
-            src="{{proffy.avatar}}"
-            alt="{{proffy.name}}">
+          <img src="{{proffy.avatar}}" alt="{{proffy.name}}">
           <div>
             <strong>{{proffy.name}}</strong>
             <span>{{proffy.subject}}</span>
@@ -88,7 +79,8 @@
         <footer>
           <p>Preço/hora<strong>R$ {{proffy.cost}} </strong>
           </p>
-          <a href="https://api.whatsapp.com/send?1=pt_br&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank">
+          <a href="https://api.whatsapp.com/send?1=pt_br&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}"
+            class="button" target="_blank">
             <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
           </a>
         </footer>
