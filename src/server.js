@@ -49,6 +49,11 @@ const weekdays = [
 
 // funcionalidades da aplicação
 
+function getSubject(subjectNumber) {
+  const arrayPosition = +subjectNumber - 1
+  return subjects[arrayPosition]
+}
+
 function pageLanding(req, res) {
   return res.render("index.html")
 }
@@ -59,7 +64,15 @@ function pageStudy(req, res) {
 }
 
 function pageGiveClasses(req, res) {
-  return res.render("give-classes.html")
+  const data = req.query
+  const isNotEmpty = Object.keys(data).length > 0
+
+  if (isNotEmpty) {
+    data.subject = getSubject(data.subject)
+    proffys.push(data)
+    return res.redirect("/study")
+  }
+  return res.render("give-classes.html", {subjects, weekdays})
 }
 
 // servidor
@@ -72,7 +85,6 @@ nunjucks.configure('src/views', {
   express: server,
   noCache: true,
 })
-
 
 server
   .use(express.static("public"))
