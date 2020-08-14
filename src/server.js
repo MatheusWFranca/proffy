@@ -47,6 +47,7 @@ const weekdays = [
  "Sábado",
 ]
 
+
 // funcionalidades da aplicação
 
 function getSubject(subjectNumber) {
