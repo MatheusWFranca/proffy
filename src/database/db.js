@@ -1,12 +1,14 @@
 const Database = require('sqlite-async')
 
+const createProffy = require('./createProffy')
+
 function execute(db) {
   return db.exec(`
     CREATE TABLE IF NOT EXISTS proffys (
        id INTEGER PRIMARY KEY AUTOINCREMENT,
        name TEXT,
        avatar TEXT,
-       whatsaap TEXT,
+       whatsapp TEXT,
        bio TEXT
     );
 
@@ -27,4 +29,4 @@ function execute(db) {
   `)
 }
 
-module.exports = Database.open(__dirname + '/database-sqlite').then(execute)
+module.exports = Database.open(__dirname + '/database.sqlite').then(execute)
