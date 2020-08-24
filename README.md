@@ -1,4 +1,4 @@
-Projeto Proffy da Next Level Week 🚀
+<h1>Projeto Proffy da Next Level Week 🚀</h1>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61566949/90998271-16e43400-e59a-11ea-93f4-f448dbefa7a2.png" width="700" style="max-width:100%;">
@@ -21,19 +21,17 @@ Projeto Proffy da Next Level Week 🚀
 
 ## 🛠 Ferramentas Utilizadas
 
--  Front-end
+- 🖍 Front-end
+  - HTML
+  - CSS
+  - Javascript
 
-  - [] HTML
-  - [] CSS
-  - [] Javascript
 
-- Back-End
+- ⚙ Back-End
+ - Express
+ - Nunjucks
+ - Nodemon
 
- - [] Express
- - [] Nunjucks
- - [] Nodemon
-
-- Database
-
-- [] Sqlite
+- 💾 Database
+  - Sqlite
 
