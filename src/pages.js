@@ -1,6 +1,6 @@
 const Database = require('./database/db');
 
-const { subjects, weekdays, getSubject, convertHoursToMinutes } = require('./utils/format'); // Object disruption so I dont need to call it from a variable
+const { subjects, weekdays, getSubject, convertHoursToMinutes } = require('./utils/format'); 
 
 function pageLanding(req, res) {
     return res.render("index.html");
@@ -48,7 +48,7 @@ function pageGiveClasses(req, res) {
     return res.render("give-classes.html", { subjects, weekdays });
 }
 
-async function saveGiveClasses(req, res) {
+async function saveClasses(req, res) {
     const createProffy = require('./database/createProffy');
 
     const proffyValue = {
@@ -89,5 +89,5 @@ module.exports = {
     pageLanding,
     pageStudy,
     pageGiveClasses,
-    saveGiveClasses
+    saveClasses
 };
