@@ -21,17 +21,17 @@
 
 ## 🛠 Ferramentas Utilizadas
 
-- 🖍 Front-end
+<h3>21. 🖍 Front-end</h3>
   - HTML
   - CSS
   - Javascript
 
-
-- ⚙ Back-End
+<h3>2. ⚙ Back-End</h3>
  - Express
  - Nunjucks
  - Nodemon
 
-- 💾 Database
+
+<h3>3. 💾 Database</h3>
   - Sqlite
 
