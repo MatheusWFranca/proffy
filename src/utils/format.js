@@ -23,19 +23,13 @@ const weekdays = [
 
 // funcionalidades da aplicação
 
-function converHoursToMinutes(time) {
-  const [hour, minutes] = time.split(":")
-  return Number((hour * 60) + minutes)
-}
-
 function getSubject(subjectNumber) {
-  const arrayPosition = +subjectNumber - 1
-  return subjects[arrayPosition]
+  return subjects[+subjectNumber - 1]; // This + is the way to ensure that its a number
 }
 
-module.exports = (
-  subjects,
-  weekdays,
-  getSubject,
-  converHoursToMinutes
-)
+function convertHoursToMinutes(time) {
+  const [hour, minutes] = time.split(':'); // Using disruption instead of "const hour = time.split(:)[0]"
+  return Number((hour * 60) + minutes);
+}
+
+module.exports = { subjects, weekdays, getSubject, convertHoursToMinutes };
