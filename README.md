@@ -1,37 +1,44 @@
-<h1>Projeto Proffy da Next Level Week 🚀</h1>
+<h1 align="center">
+  Proffy 📝
+</h1>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61566949/90998271-16e43400-e59a-11ea-93f4-f448dbefa7a2.png" width="700" style="max-width:100%;">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-
-## 💻 Layout
 <p align="center">
-<a href="https://www.figma.com/file/GHGS126t7WYjnPZdRKChJF/Proffy-Web">
-  <img alt="Figma layout" src="https://img.shields.io/badge/Layout%20Preview%20-Figma-%2304D361">
-  <p align="center">
-  <img src="https://user-images.githubusercontent.com/61566949/90998348-4eeb7700-e59a-11ea-8eb2-a25a780fee32.png" width="700" style="max-width:100%;">
-  <img src="https://user-images.githubusercontent.com/61566949/90998387-6591ce00-e59a-11ea-95cc-a2c56df6725d.png" width="700" style="max-width:100%;">
-  <img src="https://user-images.githubusercontent.com/61566949/90998418-74788080-e59a-11ea-9a27-014ff2f0c588.png" width="700" style="max-width:100%;">
-  </p>
-</a>
+ <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=8257E5&labelColor=000000" alt="PRs welcome!" />
+
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
 </p>
 
+<br>
 
+<p align="center">
+  <img alt="Proffy" src="https://user-images.githubusercontent.com/61566949/134442118-04c64bb9-9fc1-4c92-9435-ed3d1a5beb64.gif" width="100%" border>
+</p>
 
-## 🛠 Ferramentas Utilizadas
+----
 
-<h3>21. 🖍 Front-end</h3>
-  - HTML
-  - CSS
-  - Javascript
+## 🚀 Tecnologias
 
-<h3>2. ⚙ Back-End</h3>
- - Express
- - Nunjucks
- - Nodemon
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- HTML
+- CSS
+- JavaScript
+- NodeJS
+- EJS
+- Express
+- SQLite33
+----
+## 💻 Projeto
 
-<h3>3. 💾 Database</h3>
-  - Sqlite
+Proffy é uma plataforma de cadastro de professores freelancers, nela você é apto a cadastrar a sua materia e conectar-se entre os alunos, e assim gerar sua própria renda.
 
+-----
+
+Projeto desenvolvido pela Rocketseat na NLW.
+
+Feito com ♥
